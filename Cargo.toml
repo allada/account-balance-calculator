@@ -1,0 +1,18 @@
+[package]
+name = "account_balance_calculator"
+version = "0.1.0"
+edition = "2021"
+description = "A utility to parse all transactions and report account balances as output."
+
+[dependencies]
+serde = { version = "1.0.137", features = ["derive"] }
+csv-async = "1.2.4"
+futures = "0.3.21"
+tokio-util = { version = "0.7.1", features=["compat"] }
+tokio = { version = "1.18.1", features = ["rt-multi-thread", "io-util", "macros", "sync", "fs", "io-std"] }
+clap = { version = "3.1.14", features = ["derive"] }
+bigdecimal = { version = "0.3.0", features = ["serde"] }
+num_cpus = "1.13.1"
+
+[dev-dependencies]
+pretty_assertions = "1.2.1"
